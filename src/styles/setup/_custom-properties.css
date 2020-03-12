@@ -1,0 +1,71 @@
+:root {
+  /* color */
+
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray-100: #f7fafc;
+  --color-gray-200: #edf2f7;
+  --color-gray-300: #e2e8f0;
+  --color-gray-400: #cbd5e0;
+  --color-gray-500: #a0aec0;
+  --color-gray-600: #718096;
+  --color-gray-700: #4a5568;
+  --color-gray-800: #2d3748;
+  --color-gray-900: #1a202c;
+  --color-yellow-200: #fefcbf;
+  --color-blue-700: #2b6cb0;
+
+  /* font family */
+
+  --font-family-sans-serif: 'Noto Sans', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+    'Helvetica Neue', sans-serif;
+
+  /* font size */
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 4rem;
+
+  /* font weight */
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* line height */
+
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+
+  /* spacing */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space10: 2.5rem;
+  --space12: 3rem;
+  --space16: 4rem;
+  --space20: 5rem;
+  --space24: 6rem;
+  --space32: 8rem;
+  --space40: 10rem;
+  --space48: 12rem;
+  --space56: 14rem;
+  --space64: 16rem;
+
+  /* stroke width */
+  --stroke-width-1: 1px;
+  --stroke-width-2: 2px;
+  --stroke-width-5: 5px;
+}

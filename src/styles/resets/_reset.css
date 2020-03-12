@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  background: green;
+  box-sizing: border-box;
+  color: var(--color-gray-800);
+  font-family: var(--font-family-sans-serif);
+  line-height: var(--line-height-normal);
+}
+
+/* Grouped stylings
+   ========================================================================== */
+
+p,
+ul,
+ol,
+dl,
+blockquote,
+figure,
+table {
+  margin-bottom: var(--space-6);
+}
+
+/* hyphenation */
+p,
+ul,
+ol {
+  /**
+   * Read http://clagnut.com/blog/2395/ for more info about the
+   * `hyphenate-*` properties.
+   *
+   * For now these properties are still too new for the tools we are using:
+   *
+   *   - Autoprefixer doesn’t prefix them yet (see https://github.com/postcss/autoprefixer/issues/826)
+   *   - csstree/validator complains, although these are valid CSS properties.
+   *   - On caniuse.com you still can’t see info about these properties
+   *     (although it’s already in discussion, see https://github.com/Fyrd/caniuse/issues/2155)
+   *
+   * The `hyphenate-*` properties are already supported by IE and Edge, and
+   * support for other browsers will grow with time. Perfect example of
+   * progressive enhancement.
+   */
+
+  /* stylelint-disable csstree/validator */
+  -webkit-hyphenate-limit-after: 3; /* legacy */
+  -webkit-hyphenate-limit-before: 3; /* legacy */
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-last: always;
+  hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-zone: 8%;
+  -moz-hyphenate-limit-zone: 8%;
+  -ms-hyphenate-limit-zone: 8%;
+  hyphenate-limit-zone: 8%;
+  /* stylelint-enable csstree/validator */
+  hyphens: auto;
+}
+
+blockquote p,
+cite {
+  hyphens: none;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--color-gray-500);
+  margin: var(--space-12) 0;
+  text-align: left;
+  width: 100%;
+}
+
+/* Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-normal);
+}
+
+h2,
+h3,
+h4 {
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-4);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3,
+h4 {
+  /* Little optical adjustment to counter-balance tighter line height. */
+
+  padding-top: var(--space-1);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-base);
+}
+
+/* Lists
+   ========================================================================== */
+
+ul,
+ol {
+  list-style-position: outside;
+  margin-left: var(--space-6);
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+a {
+  color: var(--color-blue-700);
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+abbr[title] {
+  cursor: help;
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--color-yellow-200);
+  color: var(--color-black);
+  padding: var(--space-1);
+}
+
+/* Embedded content
+   ========================================================================== */
+
+img,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+iframe {
+  border: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}

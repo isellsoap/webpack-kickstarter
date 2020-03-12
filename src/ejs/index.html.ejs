@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!--
+      <link rel="canonical" href="">
+      <meta name="description" content="">
+    -->
+    <style>
+      <%= compilation.assets[htmlWebpackPlugin.files.css[0].substr(htmlWebpackPlugin.files.publicPath.length)].source() %>
+    </style>
+
+    <!-- Substitute the `no-js` with the `js` class on the `html` element. -->
+    <script>
+      ;(function(H) {
+        H.className = H.className.replace(/\bno-js\b/, 'js')
+      })(document.documentElement)
+    </script>
+
+    <script src="<%= htmlWebpackPlugin.files.chunks['scripts/main'].entry %>" async></script>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse excepturi omnis
+      laudantium. Eius quis, cum error recusandae iusto officiis nulla dicta, et at beatae, animi
+      aut molestias dolore ipsam.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse excepturi omnis
+      laudantium. Eius quis, cum error recusandae iusto officiis nulla dicta, et at beatae, animi
+      aut molestias dolore ipsam.
+    </p>
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+    </ul>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse excepturi omnis
+      laudantium. Eius quis, cum error recusandae iusto officiis nulla dicta, et at beatae, animi
+      aut molestias dolore ipsam.
+    </p>
+    <h2>Lorem ipsum dolor</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse excepturi omnis
+      laudantium. Eius quis, cum error recusandae iusto officiis nulla dicta, et at beatae, animi
+      aut molestias dolore ipsam.
+    </p>
+    <h3>Lorem ipsum dolor</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse excepturi omnis
+      laudantium. Eius quis, cum error recusandae iusto officiis nulla dicta, et at beatae, animi
+      aut molestias dolore ipsam.
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus esse excepturi omnis
+      laudantium. Eius quis, cum error recusandae iusto officiis nulla dicta, et at beatae, animi
+      aut molestias dolore ipsam.
+    </p>
+  </body>
+</html>

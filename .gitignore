@@ -1,0 +1,18 @@
+# IDEs
+.idea/
+.vscode/*
+!.vscode/settings.json.default
+!.vscode/extensions.json
+
+# OS
+.DS_Store
+
+# Misc
+build/
+coverage/
+dist/
+node_modules/
+output/
+target/
+.cache/
+.eslintcache

@@ -1,0 +1,21 @@
+/**
+ * Do not use the browser’s default focus styling, when JS is active.
+ * `what-input` takes care of that already.
+ */
+
+.js *:focus {
+  outline: none;
+}
+
+/**
+ * `data-whatintent` is set by the `what-input` dependeny. This allows us to
+ * show the clearer outline styles to keyboard users only which also solves the
+ * problem of the outline showing after mouse clicks. When JS is deactivated,
+ * we also fallback to the more prominent outline styles.
+ */
+
+.no-js *:focus,
+[data-whatintent='keyboard'] *:focus {
+  outline: var(--stroke-width-5) dashed var(--color-blue-700);
+  outline-offset: var(--stroke-width-2);
+}
