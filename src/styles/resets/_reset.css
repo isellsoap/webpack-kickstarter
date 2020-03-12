@@ -16,7 +16,7 @@ body {
 }
 
 html {
-  background: green;
+  background: var(--color-white);
   box-sizing: border-box;
   color: var(--color-gray-800);
   font-family: var(--font-family-sans-serif);
