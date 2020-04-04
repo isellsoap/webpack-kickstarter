@@ -5,6 +5,7 @@ import path from 'path'
 // webpack plugins
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin'
 
 // minification
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
@@ -99,13 +100,16 @@ export default (): webpack.Configuration => {
       }),
 
       ...glob.sync(`${options.src}/ejs/*.${options.ejsFileExtension}.ejs`).map(
-        page =>
+        (page) =>
           new HtmlWebpackPlugin({
             inject: false,
             template: page,
             filename: `${options.ejsFileExtension}/${path.basename(page, '.ejs')}`,
           }),
       ),
+      new ScriptExtHtmlWebpackPlugin({
+        defaultAttribute: 'async',
+      }),
     ],
   }
 
